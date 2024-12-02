@@ -1,0 +1,112 @@
+
+
+:root{
+    /*colori per lightmode*/
+    --colore-base: white;
+    --colore-card: #F2F2F2;
+    --colore-sidebar: rgb(219, 219, 219);
+    --testo:black;
+    --colore-icona:rgb(70, 70, 69);
+}
+.dark-mode{
+    /*colori per darkmode*/
+    --colore-base: #262626;
+    --colore-card: #595959;
+    --colore-sidebar: rgb(124, 124, 124);
+    --testo: white;
+    --colore-icona:rgb(253, 253, 253);
+}
+
+.pokemon-font {
+    font-family: 'Pokemon Solid', sans-serif;
+    color: #FFCB05; /* Giallo Pokémon */
+    text-shadow: 2px 2px 0 #3B4CCA; /* Ombra blu scuro */
+}
+
+/* .body{
+    background-color:var(--colore-base);
+    color:var(--testo);
+} */
+
+body {
+    background-color: var(--colore-base); /* La variabile gestisce lo sfondo */
+    color: var(--testo); /* Colore del testo */
+}
+
+.pokemon-container{
+    background-color: var(--colore-base);
+}
+.modale{
+    background-color: var(--colore-card);
+}
+.carta{
+    background-color: var(--colore-card)
+}
+
+p, h3{
+    color:var(--testo);
+}
+
+#theme-switch{
+    background-color: var(--colore-base);
+}
+
+#theme-switch svg{
+    fill: var(--colore-icona);
+}
+
+#theme-switch svg:last-child{
+    display:none;
+}
+
+.dark-mode #theme-switch svg:first-child{
+    display:none;
+}
+
+.dark-mode #theme-switch svg:last-child{
+    display:block;
+}
+
+.sidebar{
+    background-color: var(--colore-sidebar);
+}
+
+.sidebar a{
+    color: var(--testo);
+}
+
+.sidebar #close-sidebar{
+    color: var(--testo);
+}
+
+
+#search-input, #sort {
+    color:var(--testo);
+    background-color: var(--colore-card);
+}
+
+#content {
+    margin-left: 0;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+#content.sidebar-open {
+    margin-left: 16rem; /* Larghezza della sidebar */
+}
+
+@media (max-width: 768px) {
+    #content.sidebar-open {
+        margin-left: 0; /* Sidebar non influisce sui dispositivi piccoli */
+    }
+}
+
+
+/* Impostazioni per il contenuto principale */
+#content {
+    flex: 1; /* Questo fa sì che il contenuto prenda tutto lo spazio rimanente */
+}
+
+/* Impostazioni per la sidebar */
+#sidebar {
+    height: 100%; /* Sidebar prende tutta l'altezza della finestra */
+}
